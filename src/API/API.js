@@ -14,7 +14,7 @@ import {
 } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
-const URL = "http://localhost:5000";
+const URL = "https://mzaka-admin-dashboard-vf9c.vercel.app/";
 
 const addCommantries = async (
   commantry,
