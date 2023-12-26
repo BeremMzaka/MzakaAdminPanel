@@ -1,0 +1,62 @@
+.sidebar {
+  position: fixed;
+  width: 70px;
+  height: 100%;
+  background: var(--primary-color2);
+  transition: 0.3s;
+  overflow: hidden;
+  color: var(--txt-White);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 0 5px;
+}
+
+.sidebar ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.sidebar ul li:hover a,
+.sidebar ul li a.active {
+  background-color: var(--primary-color);
+  color: var(--txt-White);
+  border-radius: 10px;
+}
+
+.sidebar ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidebar ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.sidebar ul li a.active .icon svg {
+  font-size: 24px;
+  fill: white;
+}

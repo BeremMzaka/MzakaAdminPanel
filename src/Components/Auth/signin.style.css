@@ -1,0 +1,178 @@
+.signin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: hidden;
+  color: var(--txt-Black);
+  background-color: var(--bg-color);
+}
+
+.error {
+  color: var(--error-color);
+  text-align: center;
+}
+
+.signin .shape__box,
+.signin .form__box {
+  flex: 50%;
+}
+
+.signin .shape__box {
+  position: relative;
+}
+
+.signin .shape__box .shape__1,
+.signin .shape__box .shape__2,
+.signin .shape__box .shape__3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.signin .shape__box .shape__1 {
+  /* width: 85%; */
+  margin-left: 0;
+  z-index: 5;
+}
+
+.signin .shape__box .shape__2 {
+  /* width: 90%; */
+  margin-left: 25px;
+  z-index: 4;
+}
+
+.signin .shape__box .shape__3 {
+  /* width: 95%; */
+  margin-left: 50px;
+  z-index: 3;
+}
+
+.signin .shape__box .shape__4 {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  z-index: 6;
+}
+
+.signin .shape__box .shape__1 img,
+.signin .shape__box .shape__2 img,
+.signin .shape__box .shape__3 img,
+.signin .shape__box .shape__4 img {
+  width: 100%;
+  height: 100%;
+}
+
+.signin .form__box {
+  position: relative;
+}
+
+.signin .form__box .logo {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 60px;
+  height: 60px;
+}
+
+.signin .form__box .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* form style */
+.signin .form__box .form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin .form__box .form #error {
+  color: red;
+}
+
+.signin .form__box .form h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.signin .form__box .form .email__field,
+.signin .form__box .form .password__field {
+  margin: 20px 0;
+  width: 350px;
+}
+
+.signin .form__box .form .email__field input {
+  margin: 5px 0;
+  background: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.signin .form__box .form .password__field input {
+  margin: 5px 0;
+  padding: 10px 20px;
+  width: 100%;
+  background: var(--bg-color);
+  border: 1px solid #f0f3f6;
+  box-sizing: border-box;
+  box-shadow: 6px 12px 15px rgba(51, 51, 51, 0.04);
+  border-radius: 10px;
+}
+
+.signin .form__box .form .password__input__area {
+  position: relative;
+}
+
+.signin .form__box .form .password__input__area .password__icon {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.signin .form__box .form #signin__btn {
+  background: #d59344;
+  border-radius: 5px;
+  width: 350px;
+  color: var(--txt-White);
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 999px) {
+  .signin .shape__box {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .signin .form__box .form h1,
+  .signin .form__box .form p {
+    text-align: center;
+  }
+  .signin .form__box .form h1 {
+    font-size: 28px;
+  }
+  .signin .form__box .form p {
+    font-size: 14px;
+  }
+  .signin .form__box .form form {
+    width: 80%;
+  }
+  .signin .form__box .form .email__field,
+  .signin .form__box .form .password__field,
+  .signin .form__box .form #signin__btn {
+    width: 100%;
+  }
+}

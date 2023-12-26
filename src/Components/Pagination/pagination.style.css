@@ -1,0 +1,20 @@
+.page__numbers {
+  display: flex;
+}
+
+.page__numbers li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+li.active {
+  background: var(--bg-color2);
+  border-radius: 5px;
+}
+
+.page__numbers li button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

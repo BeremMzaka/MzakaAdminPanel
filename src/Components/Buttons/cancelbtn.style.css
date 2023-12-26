@@ -1,0 +1,6 @@
+button.cancelBtn {
+  font-size: 16px;
+  color: var(--error-color);
+  background: transparent;
+  cursor: pointer;
+}

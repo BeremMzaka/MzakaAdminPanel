@@ -1,0 +1,16 @@
+.project__details__box {
+  width: 100%;
+  border: 2px solid var(--bg-color2);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.project__details__box img,
+.project__details__box h4,
+.project__details__box p {
+  margin: 10px 0;
+}
+
+.project__details__box p {
+  color: var(--grey);
+}

@@ -1,0 +1,21 @@
+button.emptyBtn {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button.emptyBtn.small {
+  padding: 15px 20px;
+}
+
+button.emptyBtn.medium {
+  padding: 15px 30px;
+}
+
+button.emptyBtn.large {
+  padding: 15px 50px;
+}

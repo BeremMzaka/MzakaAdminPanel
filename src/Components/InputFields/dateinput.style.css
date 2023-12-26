@@ -1,0 +1,14 @@
+input.dateInputField {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--grey);
+  font-family: "Quicksand", sans-serif;
+  color: var(--grey);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.8;
+  filter: invert(0.8);
+}

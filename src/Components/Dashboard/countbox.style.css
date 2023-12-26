@@ -1,0 +1,79 @@
+.count__box {
+  width: 100%;
+  background-color: red;
+  background: var(--bg-color);
+  border: 0.928364px solid #f0f3f6;
+  box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.count__box .vertical__line {
+  width: 2px;
+  height: 100px;
+  background-color: #ececee;
+}
+
+.count__box .inner__box {
+  display: flex;
+  align-items: center;
+}
+
+.count__box .inner__box .icon {
+  padding: 20px;
+  opacity: 0.65;
+  border-radius: 18.5673px;
+  margin: 0 20px;
+}
+
+.count__box .inner__box .icon__1 {
+  background: rgba(242, 201, 76, 0.35);
+}
+
+.count__box .inner__box .icon__2 {
+  background: rgba(75, 181, 67, 0.35);
+}
+
+.count__box .inner__box .icon__3 {
+  background: rgba(155, 81, 224, 0.35);
+}
+
+.count__box .inner__box .data h2 {
+  color: var(--txt-Black2);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.count__box .inner__box .data h1 {
+  color: var(--txt-Black);
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 28px;
+}
+
+@media screen and (max-width: 1024px) {
+  .count__box {
+    flex-direction: column;
+  }
+
+  .count__box .inner__box {
+    width: 100%;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .count__box .vertical__line {
+    width: 100%;
+    height: 2px;
+  }
+
+  .count__box .inner__box .icon__2 {
+    margin-left: -20px;
+  }
+}

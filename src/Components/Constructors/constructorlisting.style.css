@@ -1,0 +1,50 @@
+.table__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.table__top input {
+  background: var(--bg-color2);
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+.table__top button {
+  background: var(--primary-color);
+  color: var(--txt-White);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.table__top .search {
+  position: relative;
+}
+
+.table__top .search svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.constructors .career__btn {
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 830px) {
+  .table__top {
+    flex-direction: column;
+  }
+
+  .table__top .search {
+    margin: 20px 0;
+  }
+}

@@ -1,0 +1,20 @@
+button.filledBtn {
+  background-color: var(--primary-color);
+  color: var(--txt-White);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button.filledBtn.small {
+  padding: 15px 20px;
+}
+
+button.filledBtn.medium {
+  padding: 15px 30px;
+}
+
+button.filledBtn.large {
+  padding: 15px 50px;
+}

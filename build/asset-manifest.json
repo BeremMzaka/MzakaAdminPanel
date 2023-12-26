@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.51b31c60.chunk.css",
+    "main.js": "/static/js/main.8eac38f0.chunk.js",
+    "main.js.map": "/static/js/main.8eac38f0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a7dfbd0e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a7dfbd0e.js.map",
+    "static/js/2.91d0371a.chunk.js": "/static/js/2.91d0371a.chunk.js",
+    "static/js/2.91d0371a.chunk.js.map": "/static/js/2.91d0371a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.51b31c60.chunk.css.map": "/static/css/main.51b31c60.chunk.css.map",
+    "static/js/2.91d0371a.chunk.js.LICENSE.txt": "/static/js/2.91d0371a.chunk.js.LICENSE.txt",
+    "static/media/Logo.a8c45608.svg": "/static/media/Logo.a8c45608.svg",
+    "static/media/Profile3.aa39bd7d.png": "/static/media/Profile3.aa39bd7d.png",
+    "static/media/Signin-shape1.63fe463f.svg": "/static/media/Signin-shape1.63fe463f.svg",
+    "static/media/Signin-shape2.e0205ecd.svg": "/static/media/Signin-shape2.e0205ecd.svg",
+    "static/media/Signin-shape3.6654cef8.svg": "/static/media/Signin-shape3.6654cef8.svg",
+    "static/media/Signin-shape4.ac4defe0.svg": "/static/media/Signin-shape4.ac4defe0.svg",
+    "static/media/icon-1.72683e8c.svg": "/static/media/icon-1.72683e8c.svg",
+    "static/media/icon-2.37cb125b.svg": "/static/media/icon-2.37cb125b.svg",
+    "static/media/icon-3.75a1e4ef.svg": "/static/media/icon-3.75a1e4ef.svg",
+    "static/media/icon-4.6c8e5ba4.svg": "/static/media/icon-4.6c8e5ba4.svg",
+    "static/media/icon-5.98a690c2.svg": "/static/media/icon-5.98a690c2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a7dfbd0e.js",
+    "static/js/2.91d0371a.chunk.js",
+    "static/css/main.51b31c60.chunk.css",
+    "static/js/main.8eac38f0.chunk.js"
+  ]
+}

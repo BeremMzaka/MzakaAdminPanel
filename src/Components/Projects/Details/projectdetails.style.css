@@ -1,0 +1,13 @@
+.projects__details .project__details__outer__box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.projects__details .project__details__outer__box .project__details__inner__box {
+  width: calc(33.33% - 50px);
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}

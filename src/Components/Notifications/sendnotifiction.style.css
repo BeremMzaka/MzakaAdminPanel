@@ -1,0 +1,106 @@
+.notifications #line {
+  background-color: var(--bg-color2);
+  height: 2px;
+  width: 100%;
+}
+
+.notifications h2 {
+  font-weight: 500;
+}
+
+.notifications .radio__sec {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.notifications .radio__sec .radio__flex {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.notifications .radio__sec .radio__flex h4 {
+  margin-right: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.notifications .radio__sec p {
+  font-size: 14px;
+  color: var(--txt-Black2);
+}
+
+.notifications .comment__sec {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.notifications .comment__sec div:first-child {
+  margin-right: 50px;
+}
+
+.notifications .comment__sec div.selected__people {
+  margin-right: 20px;
+}
+
+.notifications .comment__sec .text__area {
+  margin: 30px 0;
+  width: 477px;
+  height: 218px;
+}
+
+.notifications button.filledBtn {
+  margin-right: 20px;
+}
+
+.notifications button.add__user {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 20px;
+  width: 100px;
+}
+
+.notifications .add__user svg {
+  margin-right: 5px;
+}
+
+.notifications .selected__people {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+
+.notifications .selected__people img {
+  height: 100%;
+  border-radius: 100%;
+  border: 2px solid var(--bg-color);
+  margin-left: -12px;
+}
+
+.notifications .selected__people img:first-child {
+  margin-left: 0;
+}
+
+.notifications .selected__people .selected__people__circle {
+  height: 100%;
+  width: 30px;
+  background-color: var(--primary-color);
+  color: var(--txt-White);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -12px;
+  font-size: 14px;
+  border: 2px solid var(--bg-color);
+}

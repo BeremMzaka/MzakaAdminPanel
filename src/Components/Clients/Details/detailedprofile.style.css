@@ -1,0 +1,23 @@
+.client__profile {
+  display: flex;
+  align-items: center;
+  line-height: 40px;
+  margin-bottom: 50px;
+}
+
+.client__details button.danger {
+  padding: 15px 40px;
+  background-color: rgba(207, 98, 98, 0.1);
+  border-radius: 5px;
+  color: #cf6262;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.client__profile img,
+.client__profile svg {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}

@@ -1,0 +1,21 @@
+a.emptyLinkBtn {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+a.emptyLinkBtn.small {
+  padding: 15px 20px;
+}
+
+a.emptyLinkBtn.medium {
+  padding: 15px 30px;
+}
+
+a.emptyLinkBtn.large {
+  padding: 15px 50px;
+}

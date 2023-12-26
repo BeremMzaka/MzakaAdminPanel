@@ -1,0 +1,19 @@
+.search__field {
+  position: relative;
+  width: 100%;
+}
+
+.search__field svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--grey);
+}
+
+.search__field input {
+  border: 1px solid var(--grey);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 30px;
+  width: 100%;
+}

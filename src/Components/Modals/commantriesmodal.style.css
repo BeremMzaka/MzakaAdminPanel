@@ -1,0 +1,142 @@
+.commantries__modal {
+  width: 550px;
+  height: 100vh;
+  background: var(--bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+  transition: all 1.5s ease;
+  color: var(--txt-Black);
+  overflow-y: auto;
+}
+
+.overlay__background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.commantries__modal h1 {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.commantries__modal h4 {
+  color: var(--txt-Black);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.commantries__modal button.submit {
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  color: var(--txt-White);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn__group {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commantries__modal .commantries__txt__area {
+  height: 150px;
+}
+
+.commantries__modal .commantries {
+  height: 30vh;
+  overflow-y: auto;
+}
+
+.commantries__modal .commantries__flex {
+  display: flex;
+}
+
+.commantries__modal .commantries ul li {
+  font-weight: bold;
+}
+
+.commantries__modal .commantries ul li,
+.commantries__modal .commantries ul p,
+.commantries__modal .commantries ul .date {
+  margin: 5px 0;
+}
+
+.commantries__modal .commantries ul p {
+  font-size: 14px;
+}
+
+.commantries__modal .commantries ul .date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--grey);
+  font-size: 14px;
+}
+
+.commantries__modal .add__file__btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.commantries__modal .add__file__btn img {
+  margin-right: 5px;
+}
+
+.upload__file {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.upload-file-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-file-btn-wrapper button {
+  background: none;
+}
+
+.upload-file-btn-wrapper h4 {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upload-file-btn-wrapper img {
+  margin-right: 5px;
+}
+
+.upload-file-btn-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
