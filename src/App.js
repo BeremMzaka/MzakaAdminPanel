@@ -8,8 +8,13 @@ import {
   userSuccess,
 } from "./Redux/Actions/userActions";
 import FullPageLoading from "./Components/Loading/FullPageLoading";
+// const functions = require("firebase-functions");
+// const admin = require("firebase-admin");
 
-const App = () => {
+
+// admin.initializeApp();
+
+const App = (res,req) => {
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.userReducer);
   useEffect(() => {
@@ -22,5 +27,5 @@ const App = () => {
 
   return loading ? <FullPageLoading /> : <Routes />;
 };
-
+// exports.api = functions.https.onRequest(App);
 export default App;
