@@ -14,7 +14,7 @@ import {
 } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
-const URL = "http://localhost:5000";
+const URL = "https://mazaka-8c1a7.web.app";
 
 const addCommantries = async (
   commantry,
@@ -141,7 +141,7 @@ const sendNotification = (selectedOptions, message) => {
 
 const sendMail = (email, msg) => {
   axios
-    .get("http://localhost:4000/functions/sendEmail", {
+    .get("https://mazaka-8c1a7.web.app/functions/sendEmail", {
       email: email,
       msg: msg,
     })
