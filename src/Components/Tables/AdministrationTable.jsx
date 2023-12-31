@@ -60,8 +60,10 @@ const AdministrationTable = ({
                   </div>
                   <div className="col col-2" data-label="Date de création">
                     {value.createdAt
-                      ? new Date(value.createdAt.toDate()).toDateString()
-                      : new Date(value.updatedAt.toDate()).toDateString()}
+                      // ? new Date(value.createdAt.toDate()).toDateString()
+                      // : new Date(value.updatedAt.toDate()).toDateString()
+                    
+                    }
                   </div>
                   <div className="col col-1" data-label="Action">
                     <div
