@@ -59,7 +59,7 @@ const DocumentsTable = ({ data, openModal, fileType }) => {
                   </div>
                   {menu === index && (
                     <div className="menu">
-                      <p onClick={openModal}>View Details</p>
+                      <p>View Details</p>
                       <div className="horizontal__line"></div>
                       <p>Effacer</p>
                     </div>
