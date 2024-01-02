@@ -17,8 +17,13 @@ import useComments from "../../hooks/useComments";
 
 // data
 import { fileTypes } from "../../Data/Data";
+import { useSelector } from "react-redux";
 
-const CommantriesModal = ({ setModal, clientId, projectId, clientName }) => {
+const CommantriesModal = ({ setModal, projectId }) => {
+  const clientName = "Admin";
+  const { user } = useSelector((i) => i.userReducer);
+  const clientId = user.uid;
+  console.log(clientId);
   const { comments } = useComments(clientId, projectId);
   const [commantry, setCommantry] = useState("");
   const [selectedType, setSelectedType] = useState("");

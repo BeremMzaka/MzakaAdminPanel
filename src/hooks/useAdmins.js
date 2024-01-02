@@ -10,14 +10,15 @@ const useAdmins = (document) => {
       collection(db, document),
       where("isAdmin", "==", true)
     );
-    const unsubscribe = onSnapshot(adminsQuery, (querySnapshot) => {
-      setAdmins([]);
-      querySnapshot.forEach((val) => {
-        setAdmins((prev) => [...prev, val.data()]);
-      });
-    });
+    //   const unsubscribe = onSnapshot(adminsQuery, (querySnapshot) => {
+    //     console.log(querySnapshot);
+    //     setAdmins([]);
+    //     querySnapshot?.forEach((val) => {
+    //       setAdmins((prev) => [...prev, val?.data()]);
+    //     });
+    //   });
 
-    return () => unsubscribe();
+    //   return () => unsubscribe();
   }, [document]);
 
   return { admins };

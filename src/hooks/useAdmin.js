@@ -10,8 +10,8 @@ const useAdmin = (id) => {
     const getAdmin = async () => {
       const snap = await getDoc(doc(db, "user_profile", id));
 
-      if (snap.exists()) {
-        setAdmin(snap.data());
+      if (snap?.exists()) {
+        setAdmin(snap?.data());
       } else {
         console.log("No such document");
       }

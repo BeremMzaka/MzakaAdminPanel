@@ -30,7 +30,7 @@ const AdministrationListing = () => {
       <div className="table__top">
         <h2>
           Nombre total de sous-administrateurs (
-          {admins.length > 0 ? admins.length : 0})
+          {admins?.length > 0 ? admins.length : 0})
         </h2>
         <form onSubmit={handleSearch}>
           <div className="search">
