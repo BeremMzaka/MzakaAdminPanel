@@ -115,23 +115,37 @@ const CommantriesModal = ({ setModal, clientId, projectId }) => {
         ></div>
         <h1>Commentaires</h1>
         <div className="commantries">
-          <ul>
-            {comments &&
-              comments.length > 0 &&
-              comments.map((item, index) => {
-                return (
-                  <div key={index}>
-                    <li>{item.clientName}</li>
-                    <p>{item.comment}</p>
-                    <div className="date">
-                      {item.createdAt &&
-                        new Date(item.createdAt.toDate()).toDateString()}
-                    </div>
-                  </div>
-                );
-              })}
-          </ul>
-        </div>
+  <ul>
+    {comments &&
+      comments.length > 0 &&
+      comments.map((item, index) => {
+        const commentDate = item.createdAt && new Date(item.createdAt.toDate());
+        
+        // Check if commentDate is not null before formatting
+        const formattedDate = commentDate
+          ? commentDate.toLocaleString('en-US', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: 'numeric',
+              second: 'numeric',
+              timeZoneName: 'short',
+            })
+          : "Date not available";
+
+        return (
+          <div key={index}>
+            <li>{item.clientName}</li>
+            <p>{item.comment}</p>
+            <div className="date">{formattedDate}</div>
+          </div>
+        );
+      })}
+  </ul>
+</div>
+
         <div className="commantries__description__field">
           <TextArea
             value={commantry}

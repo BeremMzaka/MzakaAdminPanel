@@ -5,7 +5,7 @@ import { onSnapshot, query, collection, where } from "firebase/firestore";
 const useClients = (document) => {
   const [clients, setClients] = useState([]);
 
-  useEffect(async () => {
+  useEffect( () => {
     const clientsQuery = query(
       collection(db, document),
       where("isClient", "==", true)

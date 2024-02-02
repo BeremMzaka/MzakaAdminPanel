@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./sendnotifiction.style.css";
-
+import CustomAlert from "../CustomAlert/CustomAlert";
 // components
 import EmptyBtn from "../Buttons/EmptyBtn";
 import FilledBtn from "../Buttons/FilledBtn";
@@ -18,6 +18,8 @@ const SendNotification = () => {
   const [messageCheck, setMessageCheck] = useState(false);
   const [emailCheck, setEmailCheck] = useState(false);
   const [textCheck, setTextCheck] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [showAlert2, setShowAlert2] = useState(false);
 
   const openModal = () => {
     setModal(true);
@@ -39,13 +41,15 @@ const SendNotification = () => {
         if (msg && selectedOptions && selectedOptions.length > 0) {
           try {
             sendNotification(selectedOptions, msg);
-            alert("Notification Sent Successfully");
+            setShowAlert(true); 
             clearFields();
           } catch (error) {
             console.log(error);
           }
-        }
-      }
+        }
+      }
+    }
+  
       if (emailCheck) {
          if (msg && selectedOptions && selectedOptions.length > 0) {
            let emails = [];
@@ -53,16 +57,16 @@ const SendNotification = () => {
              emails.push(option.email);
            });
            try {
-             sendEmail(emails, msg);
-             alert("Email Sent Successfully");
-             clearFields();
+            sendNotification(selectedOptions, msg);
+            setShowAlert2(true);
+            clearFields();
            } catch (error) {
              console.log(error);
            }
          }
        }
     }
-  };
+  
 
   return (
     <>
@@ -152,19 +156,31 @@ const SendNotification = () => {
           )}
         </div>
         <div>
-          <FilledBtn title="Send" size="large" handleClick={handleSubmit} />
-          <EmptyBtn
-            title={
-              selectedOptions.length > 0
-                ? "Aux utilisateurs généraux"
-                : "Pour séparer les utilisateurs"
-            }
-            size="medium"
-            handleClick={
-              selectedOptions.length > 0 ? emptySelectedOptions : openModal
-            }
-          />
-        </div>
+  <FilledBtn title="Send" size="large" handleClick={handleSubmit} />
+  <EmptyBtn
+    title={
+      selectedOptions.length > 0
+        ? "Aux utilisateurs généraux"
+        : "Pour séparer les utilisateurs"
+    }
+    size="medium"
+    handleClick={
+      selectedOptions.length > 0 ? emptySelectedOptions : openModal
+    }
+  />
+  {showAlert && (
+    <CustomAlert
+      message="Notification Sent Successfully"
+      handleClose={() => setShowAlert(false)}
+    />
+  )}
+{showAlert2 && (
+    <CustomAlert
+      message="Email Sent Successfully"
+      handleClose={() => setShowAlert2(false)}
+    />
+  )}
+</div>
       </div>
     </>
   );

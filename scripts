@@ -1,0 +1,10 @@
+npm install --save-dev react-dev-utils
+npm i firebase 
+npm firebase init 
+npm i -S react-scripts
+npm install emailjs-com
+npm install --legacy-peer-deps
+npm config set legacy-peer-deps true
+npm install --save-dev @testing-library/user-event @testing-library/dom 
+npm install react-toastify
+npm install reactjs-popup --save
