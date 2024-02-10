@@ -13,9 +13,22 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { sendPasswordResetEmail } from "firebase/auth";
+
+// Initialize Firebase Authentication
 
 const URL = "https://mazaka-8c1a7.web.app";
 
+const resetPassword = async (email) => {
+  try {
+    await sendPasswordResetEmail(auth, email);
+    console.log("Password reset email sent successfully");
+    return { success: true, message: "Password reset email sent successfully" };
+  } catch (error) {
+    console.error("Error sending password reset email:", error);
+    return { success: false, message: "Error sending password reset email" };
+  }
+};
 const addCommantries = async (
   commantry,
   selectedType,
@@ -123,12 +136,13 @@ const createConstructor = async (name, email, password) => {
     });
 };
 
-const sendNotification = (selectedOptions, message) => {
+const sendNotification = (selectedOptions, message, screenRoute) => {
   selectedOptions.forEach(async (user) => {
     const notificationRef = `user_profile/${user.id}/notifications`;
     await addDoc(collection(db, notificationRef), {
       notification: message,
       createdAt: serverTimestamp(),
+      screenRoute: screenRoute
     })
       .then((res) => {
         console.log("Success", res);
@@ -138,6 +152,7 @@ const sendNotification = (selectedOptions, message) => {
       });
   });
 };
+
 
 const sendMail = (email, msg) => {
   axios
@@ -255,6 +270,7 @@ const RecyclebinDelete = async (id) => {
 };
 
 export {
+  resetPassword,
   addCommantries,
   updateProjectStatus,
   createConstructor,

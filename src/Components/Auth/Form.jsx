@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
 
 // style
 import "./signin.style.css";
-
+import { resetPassword } from "../../API/API";
 // icons
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
@@ -21,7 +21,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 // firebase
 import { db, auth } from "../../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { getDoc, doc, where } from "firebase/firestore";
 
 const Form = () => {
@@ -29,6 +29,7 @@ const Form = () => {
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.userReducer);
   const [showPassword, setShowPassword] = useState(false);
+  const resetPasswordRef = useRef(null);
   const initialValues = {
     email: "",
     password: "",
@@ -69,6 +70,23 @@ const Form = () => {
     }
   };
 
+  // Import the resetPassword function from your API file
+
+  const handleResetPassword = async () => {
+    try {
+      resetPasswordRef.current = true; 
+      const result = await resetPassword(formik.values.email);
+      alert("Password reset email sent successfully");
+    } catch (error) {
+      alert("Error sending password reset email: " + error.message);
+    }
+  }; 
+        
+        // Call the resetPassword function with the email address from formik values
+       
+        
+      
+  
   const formik = useFormik({
     initialValues,
     onSubmit,
@@ -115,9 +133,15 @@ const Form = () => {
           <div id="error">{formik.errors.password}</div>
         ) : null}
       </div>
+      <button type="button" onClick={handleResetPassword}>
+        Reset Password
+        <br/>
+      </button>
+      <br/>
       <button id="signin__btn" type="submit" disabled={loading}>
         {loading ? "Chargement en cours..." : "Connexion"}
       </button>
+
     </form>
   );
 };
