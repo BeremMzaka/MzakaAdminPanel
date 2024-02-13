@@ -137,20 +137,20 @@ const createConstructor = async (name, email, password) => {
 };
 
 const sendNotification = (selectedOptions, message, screenRoute) => {
-  selectedOptions.forEach(async (user) => {
-    const notificationRef = `user_profile/${user.id}/notifications`;
-    await addDoc(collection(db, notificationRef), {
-      notification: message,
-      createdAt: serverTimestamp(),
-      screenRoute: screenRoute
-    })
-      .then((res) => {
-        console.log("Success", res);
-      })
-      .catch((err) => {
-        console.log("error", err);
-      });
-  });
+  // selectedOptions.forEach(async (user) => {
+  //   const notificationRef = `user_profile/${user.id}/notifications`;
+  //   await addDoc(collection(db, notificationRef), {
+  //     notification: message,
+  //     createdAt: serverTimestamp(),
+  //     screenRoute: screenRoute??"SignUpAsConstructorScreen"
+  //   })
+  //     .then((res) => {
+  //       console.log("Success", res);
+  //     })
+  //     .catch((err) => {
+  //       console.log("error", err);
+  //     });
+  // });
 };
 
 

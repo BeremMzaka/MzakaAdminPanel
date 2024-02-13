@@ -7,9 +7,9 @@ import FilledBtn from "../Buttons/FilledBtn";
 import TextArea from "../InputFields/TextArea";
 import Toggler from "../InputFields/Toggler";
 import NotificationModal from "../Modals/NotificationModal";
-
+// import {screenRoute} from "../../API/API"
 // firebase
-import { sendNotification, sendEmail } from "../../API/API";
+import { sendNotification, sendEmail, screenRoute } from "../../API/API";
 
 const SendNotification = () => {
   const [modal, setModal] = useState(false);
@@ -40,7 +40,7 @@ const SendNotification = () => {
       if (messageCheck) {
         if (msg && selectedOptions && selectedOptions.length > 0) {
           try {
-            sendNotification(selectedOptions, msg);
+            sendNotification(selectedOptions, msg, "SignUpAsConstructorScreen");
             setShowAlert(true); 
             clearFields();
           } catch (error) {

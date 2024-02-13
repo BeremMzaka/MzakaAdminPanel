@@ -23,6 +23,7 @@ const Topbar = ({ heading }) => {
       history.push("/signin");
     });
   };
+  
   return (
     <div className="topbar">
       {heading === "Page précédente" ? (
@@ -32,16 +33,16 @@ const Topbar = ({ heading }) => {
       )}
 
       <div className="profile">
-        <img src={Profile} alt="profile" />
-        <p>Elongated Mask</p>
-        <span onClick={() => setMenu(!menu)}>
-          <BsChevronDown />
-        </span>
-        {menu && (
+        <a  onClick={handleLogout}>SignOut </a>
+        {/* <p onClick={handleLogout}>Se déconnecter</p> */}
+        {/* <span onClick={() => setMenu(!menu)}> */}
+          {/* <BsChevronDown /> */}
+        {/* </span> */}
+        {/* {menu && (
           <div className="menu">
             <p onClick={handleLogout}>Se déconnecter</p>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
